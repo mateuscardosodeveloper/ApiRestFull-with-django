@@ -6,7 +6,7 @@ on:
     branches:
       - master
       - production
-  pull_request:
+  pull_request: 
 
 jobs:
   test:
@@ -26,3 +26,28 @@ jobs:
         uses: actions/checkout@v2
       - name: Lint
         run: docker-compose run --rm app sh -c "flake8"
+  
+  deploy-staging:
+    name: Deploy to staging
+    runs-on: ubuntu-20.04
+    needs: [test, lint]
+    if: github.ref == 'refs/head/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy to Staging
+        run: echo "Deploy to STAGING code here"
+  
+  deploy-prod:
+    name: Deploy to Production
+    runs-on: ubuntu-20.04
+    needs: [test, lint]
+    if: github.ref == 'refs/heads/production'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy to Production
+        run: echo "Deploy to PRODUCTION code here"
+
+
+
