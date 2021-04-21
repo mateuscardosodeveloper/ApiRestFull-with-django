@@ -4,7 +4,7 @@ name: Continuos Deployment
 on:
   push:
     branches:
-      - main
+      - master
       - production
   pull_request:
 
