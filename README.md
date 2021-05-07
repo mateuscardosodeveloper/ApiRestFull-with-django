@@ -15,4 +15,16 @@
 
 * Configure Travis-CI and Git-workflow to automate code checks
 
+<h3>Screens Apis 🖼️</h4>
 
+* Register user login :robot:
+
+![!image](images/create_user.png)
+
+| [ Token ](images/token.png) | [ Update user without token ](images/update_without_token.png) | [ Update ](images/update.png) |
+| --- | --- | --- |
+| ![ Token ](images/token.png) | ![ update user without token ](images/update_without_token.png) | ![ Update ](images/update.png)
+
+* Register recipes from foods :meat_on_bone: :pizza: :hamburger:
+
+![!image](images/recipes.png)
