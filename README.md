@@ -15,7 +15,28 @@
 
 * Configure Travis-CI and Git-workflow to automate code checks
 
-<h3>Screens Apis 🖼️</h4>
+<h4>How to run that Api in your computer :hammer_and_wrench:</h4>
+
+* you will need have instaled [docker](https://www.docker.com/get-started)
+
+* Inside the directory excute command in your terminal
+```sh
+#step 1
+docker build .
+
+#step2
+docker-compose build
+
+#step3 - for see tests
+docker-compose run --rm app sh -c "python manage.py test && flake8"
+
+#step4 - to run 
+docker-compose up
+
+#open you browse and digite your localhost:8000 - example 127.0.0.1:8000
+```
+
+<h4>Screens Apis 🖼️</h4>
 
 * Register user login :robot:
 
